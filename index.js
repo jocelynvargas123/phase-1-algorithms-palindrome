@@ -1,16 +1,30 @@
+// Write your algorithm here
+
 function isPalindrome(word) {
-  // Write your algorithm here
+  let len = `${word}`.length
+  for (let i = 0; i < len /2; i++ ){
+    if(word[i] !== word[len - 1 - i]){
+      return false
+    }else {
+      return true
+    }
+  }
+  
 }
 
 /* 
   Add your pseudocode here
-*/
+* write function 
+one arguement thats a string
+return true if palindrome
+return false if not palidrome/
 
 /*
   Add written explanation of your solution here
-*/
+* start off with a word to test out if it works
+RACECAR /
 
-// You can run `node index.js` to view these console logs
+// You can run `node index.js` to view these console logs*/
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
@@ -20,6 +34,11 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("Expecting: true");
+  console.log("=>", isPalindrome(""));
 }
 
 module.exports = isPalindrome;
+
+
