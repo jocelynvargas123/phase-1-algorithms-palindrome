@@ -1,11 +1,15 @@
 // Write your algorithm here
 
 function isPalindrome(word) {
+  //find length
   let len = `${word}`.length
+  //pick first letter and last letter then go to the next one
   for (let i = 0; i < len /2; i++ ){
+    //if letters dont match then it returns false
     if(word[i] !== word[len - 1 - i]){
       return false
     }else {
+      // if they match then it will turn true
       return true
     }
   }
@@ -36,7 +40,7 @@ if (require.main === module) {
   console.log("=>", isPalindrome("robot"));
 
   console.log("Expecting: true");
-  console.log("=>", isPalindrome(""));
+  console.log("=>", isPalindrome("mom"));
 }
 
 module.exports = isPalindrome;
